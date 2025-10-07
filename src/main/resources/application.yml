@@ -19,9 +19,9 @@ spring:
       hibernate:
         format_sql: true
   datasource:
-    url: jdbc:sqlserver://sqlserver-escolar.database.windows.net:1433;databaseName=db-sistema-escolar;encrypt=true;trustServerCertificate=false;loginTimeout=30;
-    username: ${DB_USERNAME:admsql}   # Use variáveis de ambiente
-    password: ${DB_PASSWORD:Fiap@2tdsvms}  # Use variáveis de ambiente
+    url: ${db.url}
+    username: ${db.user}
+    password: ${db.password}
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
 
 logging:
